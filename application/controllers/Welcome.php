@@ -18,6 +18,7 @@ class Welcome extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
+	// This function displays the homepage!
     function index() {
         $this->data['pagebody'] = 'homepage';    // this is the view we want shown
         // build the list of authors, to pass on to our view
@@ -30,6 +31,18 @@ class Welcome extends Application {
 
         $this->render();
     }
+	
+	// This function displays the Elayne Boosler quote
+	function shucks()
+	{
+		$this->data['pagebody'] = 'justone';    // this is the view we want shown
+        
+		// get the second record!
+		$record = $this->quotes->get(2);
+		$this->data = array_merge($this->data, $record);
+		
+        $this->render();
+	}
 
 }
 

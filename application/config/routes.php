@@ -41,6 +41,14 @@
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
+// my own routes!
+
+$route['sleep'] = "first/zzz";
+$route['lock/(:any)/(:any)'] = "welcome/shucks";
+$route['show/(:num)'] = "first/gimme/3";
+$route['dunno'] = "guess";
+$route['([A-z]{4})/bingo'] = "bingo";
+$route['comp(\d+)/(:any)'] = "bingo/wisdom";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
