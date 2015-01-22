@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['display_override'] = array(
+	'class' 	=> 'Bold',
+	'function' 	=> 'index',
+	'filename' 	=> 'Bold.php',
+	'filepath' 	=> 'hooks'
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
